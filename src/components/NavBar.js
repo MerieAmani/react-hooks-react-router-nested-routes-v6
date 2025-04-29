@@ -1,29 +1,15 @@
-import { NavLink } from "react-router-dom";
-import "./NavBar.css";
+import { Outlet } from "react-router-dom";
+import NavBar from "./components/NavBar";
 
-function NavBar() {
-  return (
-    <nav>
-      <NavLink
-        to="/"
-        className="nav-link"
-      >
-        Home
-      </NavLink>
-      <NavLink
-        to="/about"
-        className="nav-link"
-      >
-        About
-      </NavLink>
-      <NavLink
-        to="/login"
-        className="nav-link"
-      >
-        Login
-      </NavLink>
-    </nav>
-  );
-};
+function App() {
+    return (
+        <>
+            <header>
+                <NavBar />
+            </header>
+            <Outlet />
+        </>
+    );
+}
 
-export default NavBar;
+export default App;
